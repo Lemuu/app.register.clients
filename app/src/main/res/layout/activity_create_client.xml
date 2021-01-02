@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_margin="8dp"
         android:layout_height="wrap_content"
-        android:inputType="textCapWords"
+        android:inputType="number"
         android:hint="CPF" />
 
     <EditText android:id="@+id/activity_create_client_phone"

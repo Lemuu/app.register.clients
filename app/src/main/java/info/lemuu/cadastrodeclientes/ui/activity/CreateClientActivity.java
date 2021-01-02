@@ -43,21 +43,16 @@ public class CreateClientActivity extends AppCompatActivity {
     private void onClickButtonSave() {
         Button button = findViewById(R.id.activity_create_client_button_save);
         button.setOnClickListener(view -> {
-            if (validFieldsEmpty()) return;
+            if (this.validFieldsEmpty()) return;
 
             Client client = createClient();
-
-            if (validExistClient(client)) {
-                Toast.makeText(
-                        this,
-                        "Este cliente já está cadastrado.",
-                        Toast.LENGTH_LONG)
-                        .show();
+            if (this.validExistClient(client)) {
+                Toast.makeText(this, "Este cliente já está cadastrado.", Toast.LENGTH_LONG).show();
                 return;
             }
 
             dao.save(client);
-
+            Toast.makeText(this, "Cliente cadastrado com sucesso.", Toast.LENGTH_LONG).show();
             finish();
         });
     }

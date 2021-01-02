@@ -1,6 +1,6 @@
 package info.lemuu.cadastrodeclientes.model.client;
 
-import java.util.Objects;
+import androidx.annotation.NonNull;
 
 import info.lemuu.cadastrodeclientes.model.person.CPF;
 import info.lemuu.cadastrodeclientes.model.person.People;
@@ -23,19 +23,21 @@ public class Client extends People implements IClient {
         return email;
     }
 
+    @NonNull
+    @Override
+    public String toString() {
+        String name = super.getName().split(" ")[0];
+        return name + ", CPF: " + super.getCPF().toString();
+    }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Client client = (Client) o;
-        return Objects.equals(phone, client.phone) &&
-                Objects.equals(email, client.email);
+        return super.equals(o);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), phone, email);
+        return super.hashCode();
     }
 
 }

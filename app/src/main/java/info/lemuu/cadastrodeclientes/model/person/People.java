@@ -27,13 +27,11 @@ public abstract class People implements IPeople {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         People people = (People) o;
-        return Objects.equals(name, people.name) &&
-                Objects.equals(cpf, people.cpf);
+        return Objects.equals(cpf, people.cpf);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, cpf);
+        return Objects.hash(cpf);
     }
-
 }
