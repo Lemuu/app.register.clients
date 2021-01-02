@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText android:id="@+id/activity_create_client_name"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="Nome completo" />
+
+    <EditText android:id="@+id/activity_create_client_cpf"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="CPF" />
+
+    <EditText android:id="@+id/activity_create_client_phone"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="Telefone" />
+
+    <EditText android:id="@+id/activity_create_client_email"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Email" />
+
+    <Button android:id="@+id/activity_create_client_button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:text="Salvar" />
+
+</LinearLayout>
