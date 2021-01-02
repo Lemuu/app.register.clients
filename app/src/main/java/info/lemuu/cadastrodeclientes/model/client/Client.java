@@ -30,14 +30,4 @@ public class Client extends People implements IClient {
         return name + ", CPF: " + super.getCPF().toString();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
 }

@@ -58,7 +58,12 @@ public class CreateClientActivity extends AppCompatActivity {
     }
 
     private boolean validExistClient(Client client) {
-        return dao.all().contains(client);
+        for (Client object : dao.all()) {
+            if (!object.getCPF().getCpf()
+                    .equalsIgnoreCase(client.getCPF().getCpf())) continue;
+            return true;
+        }
+        return false;
     }
 
     private boolean validFieldsEmpty() {
