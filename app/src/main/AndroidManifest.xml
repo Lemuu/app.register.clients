@@ -19,7 +19,7 @@
         </activity>
 
         <activity android:name=".ui.activity.ListClientsActivity" />
-        <activity android:name=".ui.activity.CreateClientActivity" />
+        <activity android:name=".ui.activity.FormClientActivity" />
     </application>
 
 </manifest>

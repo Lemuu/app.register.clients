@@ -4,8 +4,10 @@ import java.util.Objects;
 
 public abstract class People implements IPeople {
 
-    private final String name;
-    private final CPF cpf;
+    private String name;
+    private CPF cpf;
+
+    public People() {}
 
     public People(String name, CPF cpf) {
         this.name = name;
@@ -16,10 +18,16 @@ public abstract class People implements IPeople {
     public String getName() {
         return name;
     }
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     public CPF getCPF() {
         return this.cpf;
+    }
+    public void setCPF(CPF cpf) {
+        this.cpf = cpf;
     }
 
     @Override
